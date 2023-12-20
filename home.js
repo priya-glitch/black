@@ -148,9 +148,9 @@ var YOU = blackjackGame['you']
 var DEALER = blackjackGame['dealer']
 
 
-var hitSound = new Audio('blackjack_assets/sounds/swish.m4a');
-var winSound =new Audio('blackjack_assets/sounds/cash.mp3');
-var lossSound =new Audio('blackjack_assets/sounds/aww.mp3'); 
+var hitSound = new Audio('swish.m4a');
+var winSound =new Audio('cash.mp3');
+var lossSound =new Audio('aww.mp3'); 
   
 
 
@@ -180,7 +180,7 @@ function randomCard(){
 function showCard(card,activePlayer) {
    if (activePlayer['score']<=21) {
      let cardImage = document.createElement('img');
- 	 cardImage.src=`blackjack_assets/images/${card}.png`;
+ 	 cardImage.src=`${card}.png`;
  	 document.querySelector(activePlayer['div']).appendChild(cardImage);
  	 hitSound.play();
    }
